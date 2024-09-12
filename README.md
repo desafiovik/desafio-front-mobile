@@ -29,10 +29,6 @@ No e-mail que recebeu do desafio enviamos um token para consumir nossa API junta
   - Boas práticas de código e organização em camadas (separação de UI, lógica de negócios e API).
   - Layout responsivo e usabilidade fluida.
 
-**Entrega:**
-- Código-fonte em um repositório público/privado no GitHub.
-- Breve documentação sobre como rodar o projeto.
-
 ## **Requisitos Angular:**
 - **Login**: O usuário deve ser capaz de realizar login. Utilize autenticação simples baseada em token.
 - **Tela de Empresas**:

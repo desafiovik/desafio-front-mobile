@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "a1b682a0-d3b8-46d7-9cf5-c14a2a1c2641",
+		"name": "Api Test Frontend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1393105"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "companies",
+							"item": [
+								{
+									"name": "index",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{api_test_front_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host_api}}/api/v1/companies",
+											"host": [
+												"{{host_api}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{api_test_front_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"company\": {\n    \"name\": \"Company 3\",\n    \"address\": \"Rua z\",\n    \"site\": \"https://ruax.com\",\n    \"active\": false\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host_api}}/api/v1/companies",
+											"host": [
+												"{{host_api}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{api_test_front_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"company\": {\n    \"name\": \"Company 1 update\",\n    \"address\": \"Rua x update\",\n    \"site\": \"https://site.com\",\n    \"active\": true\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host_api}}/api/v1/companies/5c38feb7-5f4a-456d-a750-62ce576c945a",
+											"host": [
+												"{{host_api}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"companies",
+												"5c38feb7-5f4a-456d-a750-62ce576c945a"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "show",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{api_test_front_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host_api}}/api/v1/companies/5c38feb7-5f4a-456d-a750-62ce576c945a",
+											"host": [
+												"{{host_api}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"companies",
+												"5c38feb7-5f4a-456d-a750-62ce576c945a"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "destroy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{api_test_front_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host_api}}/api/v1/companies/f963a264-8417-44c4-a6e0-8efd1d65544b",
+											"host": [
+												"{{host_api}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"companies",
+												"f963a264-8417-44c4-a6e0-8efd1d65544b"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "invites",
+							"item": [
+								{
+									"name": "index",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{api_test_front_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host_api}}/api/v1/companies/5c38feb7-5f4a-456d-a750-62ce576c945a/invites",
+											"host": [
+												"{{host_api}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"companies",
+												"5c38feb7-5f4a-456d-a750-62ce576c945a",
+												"invites"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{api_test_front_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"invite\": {\n    \"name\": \"John Doe\",\n    \"kind\": \"employee\",\n    \"email\": \"johndoe@gmail.com\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host_api}}/api/v1/companies/5c38feb7-5f4a-456d-a750-62ce576c945a/invites",
+											"host": [
+												"{{host_api}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"companies",
+												"5c38feb7-5f4a-456d-a750-62ce576c945a",
+												"invites"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{api_test_front_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"invite\": {\n    \"name\": \"John Doe\",\n    \"kind\": \"employee\",\n    \"email\": \"\",\n    \"code\": \"abc123\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host_api}}/api/v1/companies/5c38feb7-5f4a-456d-a750-62ce576c945a/invites/c61d4df5-e658-4ec9-ac44-b97ac4d911dc",
+											"host": [
+												"{{host_api}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"companies",
+												"5c38feb7-5f4a-456d-a750-62ce576c945a",
+												"invites",
+												"c61d4df5-e658-4ec9-ac44-b97ac4d911dc"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "show",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{api_test_front_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host_api}}/api/v1/companies/5c38feb7-5f4a-456d-a750-62ce576c945a/invites/c61d4df5-e658-4ec9-ac44-b97ac4d911dc",
+											"host": [
+												"{{host_api}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"companies",
+												"5c38feb7-5f4a-456d-a750-62ce576c945a",
+												"invites",
+												"c61d4df5-e658-4ec9-ac44-b97ac4d911dc"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "destroy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{api_test_front_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{host_api}}/api/v1/companies/5c38feb7-5f4a-456d-a750-62ce576c945a/invites/c61d4df5-e658-4ec9-ac44-b97ac4d911dc",
+											"host": [
+												"{{host_api}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"companies",
+												"5c38feb7-5f4a-456d-a750-62ce576c945a",
+												"invites",
+												"c61d4df5-e658-4ec9-ac44-b97ac4d911dc"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Hello Api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host_api}}",
+					"host": [
+						"{{host_api}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

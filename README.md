@@ -43,9 +43,6 @@ Este projeto é um aplicativo Flutter que tem como objetivo gerenciar empresas e
 
 ## Funcionalidades
 
-### Autenticação
-- **Login:** Permite que o usuário realize o login utilizando autenticação baseada em token.
-
 ### Empresas
 - **Listagem:** Exibe todas as empresas associadas ao cliente.
 - **Cadastro:** Formulário para inclusão de nova empresa com campos para nome, endereço e site.

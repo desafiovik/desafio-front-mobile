@@ -86,11 +86,7 @@ Este projeto é um aplicativo Flutter que tem como objetivo gerenciar empresas e
 
 ## Rotas da API
 
-### Autenticação
-- **Login**
-  - **Método:** POST  
-  - **Endpoint:** `/api/v1/login`  
-  - **Descrição:** Autentica o usuário e retorna um token.
+### Autenticaçã
 
 ### Empresas
 - **Listagem:**  
